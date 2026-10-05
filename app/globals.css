@@ -1,26 +1,216 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --xm-primary: #2864ed;
+  --xm-primary-dark: #1e55d8;
+  --xm-text: #182239;
+  --xm-text-muted: #5e6b82;
+  --xm-background: #faf8ff;
+  --xm-surface: #ffffff;
+  --xm-border: #efedf4;
+  --xm-icon-background: #e9edff;
+  --xm-progress-inactive: #dce2fb;
+
+  --font-heading: var(--font-hanuman);
+  --font-body: var(--font-dm-sans);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-xm-primary: var(--xm-primary);
+  --color-xm-text: var(--xm-text);
+  --color-xm-text-muted: var(--xm-text-muted);
+  --color-xm-background: var(--xm-background);
+  --color-xm-surface: var(--xm-surface);
+  --color-xm-border: var(--xm-border);
+  --color-xm-progress-inactive: var(--xm-progress-inactive);
+
+  --font-brand: var(--font-hanuman);
+
+  --breakpoint-phone: 390px;
+  --breakpoint-frame: 600px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background: var(--xm-background);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-body), sans-serif;
+  color: var(--xm-text);
+  background: var(--xm-background);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.xm-card {
+  border: 1px solid var(--xm-border);
+  border-radius: 12px;
+  background: var(--xm-surface);
+  box-shadow:
+    0 2px 4px rgb(27 39 75 / 7%),
+    0 1px 2px rgb(27 39 75 / 3%);
+}
+
+.xm-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  background: var(--xm-primary);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgb(40 100 237 / 22%);
+  transition:
+    background 160ms ease,
+    transform 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.xm-button:hover {
+  background: var(--xm-primary-dark);
+  box-shadow: 0 4px 10px rgb(40 100 237 / 20%);
+}
+
+.xm-button:active {
+  transform: scale(0.99);
+}
+
+.xm-button:focus-visible {
+  outline: 3px solid #9bb6ff;
+  outline-offset: 3px;
+}
+
+.xm-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.xm-button-full {
+  width: 100%;
+}
+
+.xm-icon-circle {
+  display: grid;
+  place-items: center;
+  flex: 0 0 35px;
+  width: 35px;
+  height: 35px;
+  color: var(--xm-primary);
+  border-radius: 50%;
+  background: var(--xm-icon-background);
+}
+
+.xm-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 1px solid var(--xm-border);
+  border-radius: 10px;
+  background: var(--xm-surface);
+  color: var(--xm-text);
+  font-size: 16px;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.xm-input::placeholder {
+  color: var(--xm-text-muted);
+  opacity: 0.7;
+}
+
+.xm-input:focus {
+  border-color: var(--xm-primary);
+  box-shadow: 0 0 0 3px #9bb6ff;
+}
+
+.xm-input[aria-invalid="true"] {
+  border-color: #e5484d;
+}
+
+.xm-input[aria-invalid="true"]:focus {
+  box-shadow: 0 0 0 3px rgb(229 72 77 / 25%);
+}
+
+.xm-otp-box {
+  width: 100%;
+  aspect-ratio: 1;
+  min-height: 0;
+  padding: 0;
+  border: 1px solid var(--xm-border);
+  border-radius: 10px;
+  background: var(--xm-surface);
+  color: var(--xm-text);
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  caret-color: var(--xm-primary);
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.xm-otp-box:focus {
+  border-color: var(--xm-primary);
+  box-shadow: 0 0 0 3px #9bb6ff;
+}
+
+@media (min-width: 600px) {
+  body {
+    background: var(--xm-background);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
+@theme {
+  --font-hanuman: var(--font-hanuman);
+  --font-dm-sans: var(--font-dm-sans);
+  --font-cutive-mono: var(--font-cutive-mono);
 }
