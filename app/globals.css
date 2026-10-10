@@ -214,3 +214,31 @@ a {
   --font-dm-sans: var(--font-dm-sans);
   --font-cutive-mono: var(--font-cutive-mono);
 }
+
+
+@keyframes loading-dot {
+
+  0%,
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  40% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+.animate-loading {
+  animation: loading-dot 1s ease-in-out infinite;
+}
+
+.animate-delay-150 {
+  animation-delay: 50ms;
+}
+
+.animate-delay-300 {
+  animation-delay: 300ms;
+}

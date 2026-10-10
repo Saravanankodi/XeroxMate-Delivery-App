@@ -2,55 +2,71 @@ import Image from "next/image";
 
 interface HeaderProps {
   title?: string;
+  showProgress?: boolean;
   currentStep?: number;
   totalSteps?: number;
+  showRiderLabel?: boolean;
 }
 
 export default function Header({
-  title = "Welcome Partner",
-  currentStep = 2,
+  title,
+  showProgress = false,
+  currentStep = 1,
   totalSteps = 4,
+  showRiderLabel = true,
 }: HeaderProps) {
   return (
-    <header className="-mx-6 phone:-mx-6.5 frame:-mx-7">
-      <h1 className="bg-white px-3 pt-4.25 pb-3.75 text-center text-xl font-bold tracking-[-0.25px]">
-        {title}
-      </h1>
+    <header className="bg-[#FAF8FFCC]">
+      {/* Optional page title */}
+      {title && (
+        <div className="flex min-h-16 items-center justify-center  shadow-[0px_1px_8px_0px_#0000000A] backdrop-blur-xl  py-2 ">
+          <h1 className="font-hanuman text-xl font-semibold text-[#17213c]">
+            {title}
+          </h1>
+        </div>
+      )}
 
-      <div className="flex min-h-12 items-center justify-between gap-3 px-6 phone:px-6.5 frame:px-7">
-        <div className="flex min-w-0 items-center gap-1.75">
-          <Image
-            src="/logo.png"
-            alt="XeroxMate logo"
-            width={40}
-            height={40}
-            className="size-10 shrink-0 shadow-[inset_1px_1px_1px_5px_rgba(36,37,39,0.793)]"
-            priority
-          />
-          <span className="font-brand text-sm font-extrabold tracking-[0.1px]">
-            XEROXMATE
+      {/* Brand row */}
+      <div className="flex min-h-11 items-center justify-between my-5 px-3">
+        <div className="flex min-w-0 items-center gap-1.5">
+          <div className="relative size-10 shrink-0 overflow-hidden rounded-md">
+            <Image
+              src="/logo.png"
+              alt="XeroxMate logo"
+              fill
+              priority
+              sizes="40px"
+              className="object-contain"
+            />
+          </div>
+
+          <span className="truncate text-sm font-bold tracking-tight font-hanuman text-[#17213c]">
+            {showRiderLabel ? "XEROXMATE RIDER" : "XEROXMATE"}
           </span>
         </div>
 
-        <div
-          className="flex items-center gap-1.25"
-          role="progressbar"
-          aria-label="Onboarding progress"
-          aria-valuemin={1}
-          aria-valuemax={totalSteps}
-          aria-valuenow={currentStep}
-        >
-          {Array.from({ length: totalSteps }, (_, index) => (
-            <span
-              key={index}
-              className={`size-2 rounded-full ${
-                index < currentStep
-                  ? "bg-xm-primary"
-                  : "bg-xm-progress-inactive"
-              }`}
-            />
-          ))}
-        </div>
+        {/* Optional onboarding progress */}
+        {showProgress && (
+          <div
+            className="flex items-center gap-1.5"
+            role="progressbar"
+            aria-label="Onboarding progress"
+            aria-valuemin={1}
+            aria-valuemax={totalSteps}
+            aria-valuenow={currentStep}
+          >
+            {Array.from({ length: totalSteps }, (_, index) => (
+              <span
+                key={index}
+                className={`size - 1.5 rounded - full ${
+  index < currentStep
+    ? "bg-blue-600"
+    : "bg-gray-200"
+} `}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </header>
   );

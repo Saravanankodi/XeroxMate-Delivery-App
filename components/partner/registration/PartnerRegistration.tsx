@@ -12,6 +12,7 @@ import {
 
 import Header from "@/components/onboarding/Header";
 import Button from "@/components/ui/Button";
+import { useRouter } from "next/navigation";
 
 type Step = 1 | 2;
 
@@ -50,7 +51,7 @@ function PhoneInput({
       >
         <div className="flex h-full shrink-0 items-center gap-1.5 px-3">
           <span
-            className="text-base leading-none"
+            className="text-base "
             role="img"
             aria-label="India"
           >
@@ -267,11 +268,11 @@ function MobileNumberStep({
   return (
     <section className="flex flex-1 flex-col px-4 sm:px-6 space-y-2">
       <div className="pt-5 sm:pt-8">
-        <h2 className="font-hanuman text-[22px] font-bold leading-tight text-gray-900 sm:text-2xl">
+        <h2 className="font-hanuman text-[22px] font-bold   text-gray-900 sm:text-2xl">
           Enter your mobile number
         </h2>
 
-        <p className="mt-1.5 max-w-sm text-base leading-relaxed text-gray-500 sm:text-base">
+        <p className="mt-1.5 max-w-sm text-base   text-gray-500 sm:text-base">
           We’ll send a one-time password to verify your
           identity.
         </p>
@@ -296,7 +297,7 @@ function MobileNumberStep({
             className="mt-0.5 shrink-0 text-white"
           />
 
-          <p className="max-w-sm text-sm leading-tight text-gray-500">
+          <p className="max-w-sm text-sm   text-gray-500">
             Use the active personal number you will carry
             during delivery routes.
           </p>
@@ -415,7 +416,7 @@ function OtpVerificationStep({
   return (
     <section className="flex flex-1 flex-col px-4 sm:px-6 ">
       <div className="pt-5 sm:pt-8">
-        <h2 className="font-hanuman text-[22px] font-bold leading-tight text-gray-900 sm:text-lg">
+        <h2 className="font-hanuman text-[22px] font-bold   text-gray-900 sm:text-lg">
           Enter OTP
         </h2>
 
@@ -506,20 +507,25 @@ function OtpVerificationStep({
 }
 
 export default function PartnerRegistration() {
+
+  const router = useRouter();
+
   const [step, setStep] = useState<Step>(1);
   const [phone, setPhone] = useState("");
 
   const handleVerified = () => {
-    // Next onboarding step will be connected later.
+    router.push("/partner/onboarding/yourself");
   };
 
+
   return (
-    <main className="min-h-dvh w-full overflow-x-hidden bg-white p-5">
+    <main className="min-h-dvh w-full overflow-x-hidden bg-white ">
       <div className="mx-auto flex min-h-dvh w-full max-w-md flex-col">
         <Header
           title="Welcome Partner"
-          currentStep={step}
+          currentStep={1}
           totalSteps={4}
+          showProgress
         />
 
         {step === 1 && (
