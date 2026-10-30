@@ -31,7 +31,7 @@ export default function UploadSheet({
 
                 <div className="mb-4 flex items-start justify-between">
                     <div>
-                        <h2 className="text-lg font-bold text-gray-800">
+                        <h2 className="text-lg font-bold  font-hanuman text-gray-800">
                             {documentName}
                         </h2>
 
@@ -77,7 +77,7 @@ export default function UploadSheet({
                     </span>
 
                     <span>
-                        <span className="block text-[15px] font-bold text-gray-800">
+                        <span className="block text-[15px] font-bold  font-hanuman text-gray-800">
                             Take Photo
                         </span>
 
@@ -97,7 +97,7 @@ export default function UploadSheet({
                     </span>
 
                     <span>
-                        <span className="block text-[15px] font-bold text-gray-800">
+                        <span className="block text-[15px] font-bold  font-hanuman text-gray-800">
                             Choose from Gallery
                         </span>
 
@@ -110,7 +110,7 @@ export default function UploadSheet({
                 <button
                     type="button"
                     onClick={onClose}
-                    className="mt-3 w-full rounded-xl bg-[#EAEDFF] py-3 text-[11px] font-semibold text-gray-500"
+                    className="mt-3 w-full rounded-xl bg-[#EAEDFF] py-3 text-[11px] font-semibold  font-hanuman text-gray-500"
                 >
                     Cancel
                 </button>

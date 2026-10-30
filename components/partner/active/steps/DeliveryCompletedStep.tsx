@@ -1,0 +1,11 @@
+"use client";
+
+import { ArrowRight, Check, CheckCircle2, ReceiptText, Wallet, Zap } from "lucide-react";
+
+type DeliveryCompletedStepProps = { completedAt: Date; onFindNextOrder: () => void; onViewEarnings: () => void };
+export default function DeliveryCompletedStep({ completedAt, onFindNextOrder, onViewEarnings }: DeliveryCompletedStepProps) {
+  return <div className="space-y-3 p-3 pb-20"><section className="text-center"><div className="mx-auto grid size-14 place-items-center rounded-full bg-emerald-700 text-white"><Check size={30} /></div><h1 className="mt-2 text-lg font-bold">Delivery completed</h1><p className="text-xs text-emerald-700"><CheckCircle2 size={12} className="mr-1 inline" />Handover recorded locally at {completedAt.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</p><p className="mt-2 text-xs text-slate-500">#XM20481 · OTP entered · backend verification pending</p></section>
+    <section className="rounded-xl bg-[#292D2E] p-4 text-white"><p className="text-xs font-bold text-emerald-300">TOTAL REWARD</p><p className="mt-1 text-3xl font-bold text-emerald-400">₹88.00</p><p className="mt-3 flex items-center gap-2 rounded-lg bg-white/10 p-2 text-xs"><Wallet size={14} />Wallet credit is pending settlement confirmation.</p><div className="mt-3 space-y-2 border-t border-white/10 pt-3 text-xs"><p className="flex justify-between"><span>Delivery payout</span><span>₹88.00</span></p><p className="flex justify-between text-white/60"><span>COD collection</span><span>₹200.00</span></p></div></section>
+    <section className="rounded-xl bg-white p-3 text-xs shadow-sm"><h2 className="font-bold">Handover summary</h2><p className="mt-1 text-slate-500">Recipient: Arun Kumar · Gate B security desk</p><p className="mt-2 rounded-lg bg-slate-50 p-2">A recipient rating will appear here when supplied by the order service.</p></section>
+    <button type="button" onClick={onFindNextOrder} className="flex min-h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#0647A8] text-sm font-bold text-white"><Zap size={16} />FIND NEXT ORDER <ArrowRight size={15} /></button><button type="button" onClick={onViewEarnings} className="flex min-h-10 w-full items-center justify-center gap-2 rounded-lg bg-slate-200 text-xs font-bold text-slate-700"><ReceiptText size={14} />VIEW EARNINGS & WALLET</button></div>;
+}

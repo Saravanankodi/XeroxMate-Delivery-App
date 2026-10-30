@@ -30,7 +30,7 @@ export default function WelcomePage() {
             />
           </div>
 
-          <h1 className="mt-5  font-bold tracking-tight text-3xl md:mt-6 md:text-4xl">
+          <h1 className="mt-5  font-bold  font-hanuman tracking-tight text-3xl md:mt-6 md:text-4xl">
             XeroxMate Rider
           </h1>
 

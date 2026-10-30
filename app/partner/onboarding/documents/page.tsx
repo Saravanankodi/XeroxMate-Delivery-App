@@ -17,9 +17,12 @@ interface DocumentState {
 }
 
 const initialDocuments: Record<DocumentType, DocumentState> = {
+    // aadhaar: {
+    //     uploaded: true,
+    //     fileName: "aadhaar.jpg",
+    // },
     aadhaar: {
-        uploaded: true,
-        fileName: "aadhaar.jpg",
+        uploaded: false,
     },
     license: {
         uploaded: false,
@@ -78,7 +81,7 @@ export default function DocumentsPage() {
                 />
 
                 <section className="mt-4 px-4">
-                    <h1 className="font-hanuman text-[22px] font-bold   text-gray-900 mb-2">
+                    <h1 className="font-hanuman text-[22px] font-bold  font-hanuman   text-gray-900 mb-2">
                         Verify your documents
                     </h1>
 
@@ -115,7 +118,7 @@ export default function DocumentsPage() {
                     <Button
                         type="button"
                         onClick={handleContinue}
-                        className="w-full rounded-xl bg-blue-600 py-3 text-sm font-semibold text-white shadow-[0_4px_10px_rgba(37,99,235,0.25)] transition hover:bg-blue-700"
+                        className="w-full rounded-xl bg-blue-600 py-3 text-xl font-semibold  font-hanuman text-white shadow-[0_4px_10px_rgba(37,99,235,0.25)] transition hover:bg-blue-700"
                     >
                         Continue →
                     </Button>

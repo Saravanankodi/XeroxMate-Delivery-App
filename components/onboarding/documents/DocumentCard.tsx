@@ -33,7 +33,7 @@ export default function DocumentCard({
 
                 < div className = "min-w-0 flex-1" >
                     <div className="flex items-center gap-1" >
-                        <p className="truncate text-[15px] font-semibold text-gray-800" >
+                        <p className="truncate text-[15px] font-semibold  font-hanuman text-gray-800" >
                             { title }
                             </p>
 
@@ -50,7 +50,7 @@ export default function DocumentCard({
         < span
     className = {
         [
-        "mt-0.5 inline-flex rounded-md px-1.5 py-0.5 text-[11px] font-semibold",
+        "mt-0.5 inline-flex rounded-md px-1.5 py-0.5 text-[11px] font-semibold  font-hanuman",
         uploaded
             ? "bg-[#EAEDFF] text-[#2563EB]"
             : "bg-[#FFDAD6] text-[#93000A]",
@@ -66,7 +66,7 @@ export default function DocumentCard({
     onClick = { onAction }
     className = {
         [
-        "shrink-0 rounded-lg px-3 py-1.5 text-[13px] font-semibold transition",
+        "shrink-0 rounded-lg px-3 py-1.5 text-[13px] font-semibold  font-hanuman transition",
         uploaded
             ? "bg-[#F2F3FF] text-[#2563EB] hover:bg-blue-100"
             : "bg-[#D5E4F8] text-[#2563EB] hover:bg-blue-200",

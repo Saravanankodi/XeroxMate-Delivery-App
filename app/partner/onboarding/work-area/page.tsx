@@ -53,7 +53,7 @@ export default function WorkAreaPage() {
 
                 <section className="flex flex-1 flex-col px-4 sm:px-6">
                     <div>
-                        <h1 className="font-hanuman text-[22px] font-bold  text-gray-900">
+                        <h1 className="font-hanuman text-[22px] font-bold  font-hanuman  text-gray-900">
                             Where do you want to work?
                         </h1>
 

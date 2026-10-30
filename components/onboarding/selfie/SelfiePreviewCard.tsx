@@ -19,7 +19,7 @@ export default function SelfiePreviewCard({
                 </div>
 
                 <div className="min-w-0 flex-1">
-                    <p className="text-[10px] font-bold text-gray-800">
+                    <p className="text-[10px] font-bold  font-hanuman text-gray-800">
                         Selfie Preview Flow
                     </p>
 
@@ -28,7 +28,7 @@ export default function SelfiePreviewCard({
                     </p>
                 </div>
 
-                <span className="rounded-md bg-blue-50 px-2 py-1 text-[8px] font-semibold text-blue-600">
+                <span className="rounded-md bg-blue-50 px-2 py-1 text-[8px] font-semibold  font-hanuman text-blue-600">
                     Ready
                 </span>
             </div>
@@ -37,7 +37,7 @@ export default function SelfiePreviewCard({
                 <button
                     type="button"
                     onClick={onRetake}
-                    className="flex items-center justify-center gap-1.5 rounded-lg bg-indigo-50 py-2.5 text-[10px] font-semibold text-blue-600"
+                    className="flex items-center justify-center gap-1.5 rounded-lg bg-indigo-50 py-2.5 text-[10px] font-semibold  font-hanuman text-blue-600"
                 >
                     <RotateCcw className="size-3.5" />
                     Retake
@@ -46,7 +46,7 @@ export default function SelfiePreviewCard({
                 <button
                     type="button"
                     onClick={onPreview}
-                    className="flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 py-2.5 text-[10px] font-semibold text-white"
+                    className="flex items-center justify-center gap-1.5 rounded-lg bg-blue-600 py-2.5 text-[10px] font-semibold  font-hanuman text-white"
                 >
                     <CheckCircle2 className="size-3.5" />
                     Preview

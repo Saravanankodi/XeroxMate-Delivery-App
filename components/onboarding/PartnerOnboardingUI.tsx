@@ -1,23 +1,19 @@
 "use client";
 
 import {
-    
+
     ArrowRight,
-   
     Camera,
     Check,
     ChevronDown,
-   
     FileText,
     Info,
-   
     Lock,
-   
     ShieldCheck,
-   
     UserIcon,
-    
+
 } from "lucide-react";
+import { useState } from "react";
 
 interface FieldLabelProps {
     label: string;
@@ -32,7 +28,7 @@ export function FieldLabel({
 }: FieldLabelProps) {
     return (
         <div className="mb-1.5 flex items-center justify-between gap-2">
-            <label className="text-xs font-semibold text-gray-900">
+            <label className="text-xs font-semibold  font-hanuman text-gray-900">
                 {label}
                 {required && (
                     <span className="ml-1 text-red-500">*</span>
@@ -53,12 +49,12 @@ export function PartnerBrandSection() {
         <div className="flex items-center justify-between px-4 pb-4 sm:px-6">
             <div className="flex items-center gap-2">
                 <div className="flex size-8 items-center justify-center rounded-lg border border-gray-200 bg-white shadow-sm">
-                    <div className="text-[7px] font-bold text-blue-600">
+                    <div className="text-[7px] font-bold  font-hanuman text-blue-600">
                         XM
                     </div>
                 </div>
 
-                <span className="font-serif text-xs font-bold text-gray-900">
+                <span className="font-serif text-xs font-bold  font-hanuman text-gray-900">
                     XEROXMATE
                 </span>
             </div>
@@ -86,7 +82,7 @@ export function ProfilePhotoCard() {
 
             <div className="min-w-0">
                 <div className="flex items-center gap-1.5">
-                    <span className="text-[13px] font-bold text-gray-900">
+                    <span className="text-[16px] font-bold  font-hanuman text-gray-900">
                         Profile Photo
                     </span>
 
@@ -102,9 +98,9 @@ export function ProfilePhotoCard() {
 
                 <button
                     type="button"
-                    className="mt-1 text-[13px] font-semibold text-blue-600"
+                    className="mt-1 text-[13px] font-bold  font-hanuman text-blue-600"
                 >
-                    Upload photo 
+                    Upload photo
                 </button>
             </div>
         </div>
@@ -127,7 +123,7 @@ export function InputBox({
     readOnly?: boolean;
 }) {
     return (
-        <div className="flex h-11 items-center rounded-lg border border-blue-100 bg-indigo-50 px-3">
+        <div className="flex h-13 items-center rounded-lg border border-blue-100 bg-indigo-50 px-3">
             {icon && (
                 <span className="mr-2 shrink-0 text-gray-500">
                     {icon}
@@ -162,7 +158,7 @@ export function VerificationCard() {
             </div>
 
             <div>
-                <p className="text-[13px] font-bold text-gray-900">
+                <p className="text-[13px] font-bold  font-hanuman text-gray-900">
                     Fast Verification Active
                 </p>
 
@@ -203,7 +199,7 @@ export function ContinueButton({
         <button
             type="button"
             onClick={onClick}
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-blue-600 text-xl font-semibold text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700 active:scale-[0.99]"
+            className="flex h-15 w-full items-center justify-center gap-2 rounded-xl bg-blue-600 text-xl font-semibold  font-hanuman text-white shadow-md shadow-blue-600/20 transition hover:bg-blue-700 active:scale-[0.99]"
         >
             {children}
 
@@ -256,7 +252,7 @@ export function SelectField({
                         {topText}
                     </p>
 
-                    <p className="mt-0.5 truncate text-lg font-semibold text-gray-900">
+                    <p className="mt-0.5 truncate text-lg font-semibold  font-hanuman text-gray-900">
                         {value}
                     </p>
                 </div>
@@ -284,8 +280,8 @@ export function HubChip({
             type="button"
             onClick={onClick}
             className={`flex items-center gap-1.5 rounded-full px-3 py-1.5 text-[13px] font-medium transition ${selected
-                    ? "bg-blue-100 text-gray-900"
-                    : "bg-indigo-50 text-gray-700"
+                ? "bg-blue-100 text-gray-900"
+                : "bg-indigo-50 text-gray-700"
                 }`}
         >
             {selected && (
@@ -322,7 +318,7 @@ export function WorkInfoCard() {
             <div className="mt-3 flex items-start gap-2 rounded-lg bg-white px-3 py-2.5 shadow-sm">
                 <span className="mt-1 size-2 shrink-0 rounded-full bg-blue-600" />
 
-                <p className="text-[13px] font-semibold   text-gray-900">
+                <p className="text-[13px] font-semibold  font-hanuman   text-gray-900">
                     42 active Xerox print hubs in Anna Nagar
                     Zone
                 </p>
@@ -349,23 +345,23 @@ export function VehicleCard({
             type="button"
             onClick={onClick}
             className={`relative min-h-32 rounded-xl p-4 text-left transition ${selected
-                    ? "bg-blue-100 shadow-sm"
-                    : "bg-indigo-50"
+                ? "bg-blue-100 shadow-sm"
+                : "bg-indigo-50"
                 }`}
         >
             <div
                 className={`flex size-9 items-center justify-center rounded-lg ${selected
-                        ? "bg-blue-600 text-white"
-                        : "bg-blue-100 text-gray-500"
+                    ? "bg-blue-600 text-white"
+                    : "bg-blue-100 text-gray-500"
                     }`}
             >
                 {icon}
             </div>
 
             <p
-                className={`mt-3 text-[15px] font-semibold ${selected
-                        ? "text-blue-600"
-                        : "text-gray-900"
+                className={`mt-3 text-[15px] font-semibold  font-hanuman ${selected
+                    ? "text-blue-600"
+                    : "text-gray-900"
                     }`}
             >
                 {title}
@@ -377,8 +373,8 @@ export function VehicleCard({
 
             <span
                 className={`absolute right-3 top-3 flex size-5 items-center justify-center rounded-full ${selected
-                        ? "bg-blue-600 text-white"
-                        : "bg-blue-100"
+                    ? "bg-blue-600 text-white"
+                    : "bg-blue-100"
                     }`}
             >
                 {selected && (
@@ -392,25 +388,96 @@ export function VehicleCard({
     );
 }
 
+
+
+
+
+
 export function VehicleNumberBox() {
+    const [vehicleNumber, setVehicleNumber] = useState("");
+
+    // Exact format: AA 00 AA 0000
+    const isValid = /^[A-Z]{2} \d{2} [A-Z]{2} \d{4}$/.test(
+        vehicleNumber
+    );
+
+    const handleChange = (value: string) => {
+        // Remove spaces and convert letters to uppercase
+        const cleaned = value
+            .toUpperCase()
+            .replace(/[^A-Z0-9]/g, "");
+
+        let formatted = "";
+
+        // First 2 characters: letters only
+        const letters1 = cleaned
+            .slice(0, 2)
+            .replace(/[^A-Z]/g, "");
+
+        formatted = letters1;
+
+        // Next 2 characters: numbers only
+        const numbers1 = cleaned
+            .slice(2, 4)
+            .replace(/[^0-9]/g, "");
+
+        if (numbers1.length > 0) {
+            formatted += " " + numbers1;
+        }
+
+        // Next 2 characters: letters only
+        const letters2 = cleaned
+            .slice(4, 6)
+            .replace(/[^A-Z]/g, "");
+
+        if (letters2.length > 0) {
+            formatted += " " + letters2;
+        }
+
+        // Last 4 characters: numbers only
+        const numbers2 = cleaned
+            .slice(6, 10)
+            .replace(/[^0-9]/g, "");
+
+        if (numbers2.length > 0) {
+            formatted += " " + numbers2;
+        }
+
+        setVehicleNumber(formatted);
+    };
+
     return (
-        <div className="flex h-14 items-center rounded-xl bg-indigo-50 px-4">
+        <div className="flex h-13 items-center rounded-xl bg-indigo-50 px-4">
             <div className="flex items-center gap-1 rounded-md bg-blue-100 px-2 py-1">
                 <FileText
                     size={12}
                     className="text-gray-500"
                 />
 
-                <span className="text-[11px] font-semibold text-gray-600">
+                <span className="text-[11px] font-semibold  font-hanuman text-gray-600">
                     IND
                 </span>
             </div>
 
-            <span className="ml-3 text-[15px] font-bold tracking-wide text-gray-900">
-                TN 09 AB 1234
-            </span>
+            <input
+                type="text"
+                value={vehicleNumber}
+                onChange={(e) => handleChange(e.target.value)}
+                placeholder="TN 09 AB 1234"
+                maxLength={13}
+                autoComplete="off"
+                spellCheck={false}
+                aria-label="Vehicle registration number"
+                aria-invalid={
+                    vehicleNumber.length > 0 && !isValid
+                }
+                className="ml-3 min-w-0 flex-1 bg-transparent text-[15px] font-bold  font-hanuman tracking-wide text-gray-900 outline-none placeholder:font-normal placeholder:text-gray-400"
+            />
 
-            <div className="ml-auto flex size-6 items-center justify-center rounded-full bg-blue-600">
+            <div
+                className={`ml-auto flex size-6 shrink-0 items-center justify-center rounded-full transition-colors ${isValid ? "bg-blue-600" : "bg-gray-300"
+                    }`}
+            >
                 <Check
                     size={14}
                     strokeWidth={3}
@@ -420,6 +487,9 @@ export function VehicleNumberBox() {
         </div>
     );
 }
+
+
+
 
 export function VehicleInfoNote() {
     return (

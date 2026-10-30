@@ -22,7 +22,7 @@ export default function ApprovedPage() {
 
       {/* Page heading */}
       <div className="border-b border-gray-100 px-4 py-2.5 text-center">
-        <h1 className="font-hanuman text-2xl font-semibold">
+        <h1 className="font-hanuman text-2xl font-semibold  font-hanuman">
           Account Approved
         </h1>
       </div>
@@ -36,7 +36,7 @@ export default function ApprovedPage() {
             </div>
           </div>
 
-          <h2 className="mt-1.5 text-center text-[22px] font-bold">
+          <h2 className="mt-1.5 text-center text-[22px] font-bold  font-hanuman">
             You're ready to deliver!
           </h2>
 
@@ -98,7 +98,7 @@ export default function ApprovedPage() {
         <Button
           type="button"
           onClick={() => router.push("/partner/home")}
-          className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-md bg-blue-600 py-2.5 text-xl font-semibold text-white shadow-md shadow-blue-100 hover:bg-blue-700"
+          className="mt-4 flex w-full items-center justify-center gap-1.5 rounded-md bg-blue-600 py-2.5 text-xl font-semibold  font-hanuman text-white shadow-md shadow-blue-100 hover:bg-blue-700"
         >
           Go to Home
           <span aria-hidden="true">→</span>

@@ -36,7 +36,7 @@ export default function PartnerWelcome() {
             </span>
           </div>
 
-          <h2 className="text-center text-[22px]  font-bold tracking-[-0.35px]">
+          <h2 className="text-center text-[22px]  font-bold  font-hanuman tracking-[-0.35px]">
             Become a Delivery Partner
           </h2>
 
@@ -83,10 +83,10 @@ export default function PartnerWelcome() {
           </div>
 
           <div className="min-w-0 flex-1">
-            <span className="mb-0.75 block text-[11px] font-bold tracking-[0.35px] text-xm-primary">
+            <span className="mb-0.75 block text-[11px] font-bold  font-hanuman tracking-[0.35px] text-xm-primary">
               FAST-TRACK SETUP
             </span>
-            <h3 className="text-sm  font-bold">
+            <h3 className="text-sm  font-bold  font-hanuman">
               Quick 3-step digital journey
             </h3>
             <p className="mt-0.5 text-[11px]  text-xm-text-muted">
@@ -102,11 +102,11 @@ export default function PartnerWelcome() {
           Get Started <ArrowRight size={18} />
         </Button>
 
-        <p className="mt-3.25 flex items-center justify-center gap-2 text-center text-xs  text-xm-text-muted">
+        <p className="mt-3.25 flex items-center justify-center gap-2 text-center text-base  text-xm-text-muted">
           Already registered?{" "}
           <Link
             href="/partner/sign-in"
-            className="font-semibold text-xm-primary hover:underline"
+            className="font-semibold  font-hanuman text-xm-primary text-lg hover:underline"
           >
             Sign in
           </Link>

@@ -94,7 +94,7 @@ export default function VehiclePage() {
 
                 <section className="flex flex-1 flex-col px-4 sm:px-6">
                     <div className="mt-1">
-                        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-[11px] font-semibold text-gray-700">
+                        <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-[11px] font-semibold  font-hanuman text-gray-700">
                             <Bike
                                 size={11}
                                 className="text-blue-600"
@@ -102,7 +102,7 @@ export default function VehiclePage() {
                             Vehicle Details
                         </span>
 
-                        <h1 className="mt-2 font-hanuman text-[22px] font-bold   text-gray-900">
+                        <h1 className="mt-2 font-hanuman text-[22px] font-bold  font-hanuman   text-gray-900">
                             Which vehicle do you use?
                         </h1>
 
@@ -129,7 +129,7 @@ export default function VehiclePage() {
 
                     <div className="mt-6">
                         <div className="mb-1.5 flex items-center justify-between">
-                            <label className="text-[13px] font-semibold text-gray-900">
+                            <label className="text-[13px] font-semibold  font-hanuman text-gray-900">
                                 Vehicle number
                                 <span className="ml-1 text-red-500">
                                     *
@@ -138,7 +138,7 @@ export default function VehiclePage() {
 
                             <button
                                 type="button"
-                                className="text-[11px] font-semibold text-blue-600"
+                                className="text-[11px] font-semibold  font-hanuman text-blue-600"
                             >
                                 STANDARD FORMAT
                             </button>
@@ -160,9 +160,6 @@ export default function VehiclePage() {
                             <span>→</span>
                         </Button>
 
-                        <p className="mt-2 text-center text-[11px] text-gray-500">
-                            Step 8 of 8 • Documents next
-                        </p>
                     </div>
                 </section>
             </div>

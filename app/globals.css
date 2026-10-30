@@ -12,7 +12,7 @@
   --xm-progress-inactive: #dce2fb;
 
   --font-heading: var(--font-hanuman);
-  --font-body: var(--font-dm-sans);
+  --font-body: var(--font-space-grotesk);
 }
 
 @theme inline {
@@ -91,7 +91,7 @@ a {
   border-radius: 10px;
   color: #fff;
   background: var(--xm-primary);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 2px 4px rgb(40 100 237 / 22%);
@@ -211,7 +211,7 @@ a {
 
 @theme {
   --font-hanuman: var(--font-hanuman);
-  --font-dm-sans: var(--font-dm-sans);
+  --font-space-grotesk: var(--font-space-grotesk);
   --font-cutive-mono: var(--font-cutive-mono);
 }
 

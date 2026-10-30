@@ -31,17 +31,17 @@ export default function StatusHero({
             </div>
 
             {!approved && (
-                <span className="mt-2 rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold tracking-wide text-gray-600">
+                <span className="mt-2 rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold  font-hanuman tracking-wide text-gray-600">
                     <span className="mr-1 inline-block size-1.5 rounded-full bg-blue-600" />
                     IN PROGRESS
                 </span>
             )}
 
-            <h1 className="mt-2 font-hanuman text-[22px] font-bold text-[#17213c]">
+            <h1 className="mt-2 font-hanuman text-[22px] font-bold  font-hanuman text-[#17213c]">
                 {title}
             </h1>
 
-            <p className="mt-1 max-w-[280px] whitespace-pre-line text-[14px]  text-gray-500">
+            <p className="mt-1 max-w-[90%] whitespace-pre-line text-[14px]  text-gray-500">
                 {description}
             </p>
         </section>

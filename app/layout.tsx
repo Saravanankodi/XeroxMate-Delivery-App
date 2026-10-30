@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, Hanuman, Cutive_Mono } from "next/font/google";
+import { Space_Grotesk, Hanuman, Cutive_Mono } from "next/font/google";
 import "./globals.css";
 
 const hanuman = Hanuman({
@@ -8,10 +8,10 @@ const hanuman = Hanuman({
   variable: "--font-hanuman",
 });
 
-const dmSans = DM_Sans({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-dm-sans",
+  variable: "--font-space-grotesk",
 });
 
 const cutiveMono = Cutive_Mono({
@@ -31,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${hanuman.variable} ${dmSans.variable} ${cutiveMono.variable}`}>
+    <html lang="en" className={`${hanuman.variable} ${spaceGrotesk.variable} ${cutiveMono.variable}`}>
       <body>{children}</body>
     </html>
   );

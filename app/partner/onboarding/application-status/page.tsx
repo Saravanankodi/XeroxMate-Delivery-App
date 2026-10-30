@@ -60,7 +60,7 @@ export default function ApplicationStatusPage() {
                 key={stage.title}
                 className="relative flex gap-3 pb-3 last:pb-0"
               >
-                {index < stages.length - 1 && (
+                {index < stages.length-1 && (
                   <span
                     className={`absolute left-[7px] top-4 h-full w-px ${index < 2 ? "bg-blue-200" : "bg-gray-200"
                       } `}
@@ -84,7 +84,7 @@ export default function ApplicationStatusPage() {
                 <div className="min-w-0 flex-1">
                   <div className="flex items-start justify-between gap-2">
                     <p
-                      className={`text-[16px] font-bold ${index === 2
+                      className={`text-[16px] font-bold  font-hanuman ${index === 2
                           ? "text-blue-700"
                           : "text-[#17213c]"
                         } `}
@@ -94,7 +94,7 @@ export default function ApplicationStatusPage() {
 
                     {stage.status && (
                       <span
-                        className={`shrink-0 text-[12px] font-semibold ${stage.status === "Active"
+                        className={`shrink-0 text-[12px] font-semibold  font-hanuman ${stage.status === "Active"
                             ? "rounded-full bg-blue-50 px-1.5 py-0.5 text-blue-600"
                             : "text-blue-600"
                           } `}
@@ -129,7 +129,7 @@ export default function ApplicationStatusPage() {
           onClick={() =>
             router.push("/partner/onboarding/approved")
           }
-          className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-md bg-blue-700 py-2.5 text-xl font-semibold text-white shadow-sm hover:bg-blue-800"
+          className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-md bg-blue-700 py-2.5 text-xl font-semibold  font-hanuman text-white shadow-sm hover:bg-blue-800"
         >
           Check Status
           <Clock3 size={15} />

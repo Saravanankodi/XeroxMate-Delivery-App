@@ -26,7 +26,7 @@ export default function ReviewSection({
                         {icon}
                     </span>
 
-                    <h2 className="text-[16px] font-bold text-[#131B2E]">
+                    <h2 className="text-[16px] font-bold  font-hanuman text-[#131B2E]">
                         {title}
                     </h2>
                 </div>

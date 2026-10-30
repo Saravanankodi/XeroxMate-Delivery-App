@@ -44,7 +44,7 @@ function PhoneInput({
       </label>
 
       <div
-        className={`flex h-11 w-full items-center overflow-hidden rounded-lg border bg-white transition ${error
+        className={`flex h-13 w-full items-center overflow-hidden rounded-lg border bg-white transition ${error
             ? "border-red-500"
             : "border-blue-600 border-2 focus-within:ring-2 focus-within:ring-blue-600/15"
           } ${disabled ? "opacity-60" : ""}`}
@@ -144,14 +144,14 @@ function OtpInput({
       !digits[index] &&
       index > 0
     ) {
-      inputRefs.current[index - 1]?.focus();
+      inputRefs.current[index-1]?.focus();
     }
 
     if (
       event.key === "ArrowLeft" &&
       index > 0
     ) {
-      inputRefs.current[index - 1]?.focus();
+      inputRefs.current[index-1]?.focus();
     }
 
     if (
@@ -209,7 +209,7 @@ function OtpInput({
           }
           onPaste={handlePaste}
           aria-label={`OTP digit ${index + 1}`}
-          className="h-11 w-full rounded-lg border border-gray-200 bg-white text-center text-[22px] font-bold text-gray-900 shadow-sm outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-600/15 disabled:opacity-60"
+          className="h-13 w-full rounded-lg border border-gray-200 bg-white text-center text-[22px] font-bold  font-hanuman text-gray-900 shadow-sm outline-none transition focus:border-blue-600 focus:ring-2 focus:ring-blue-600/15 disabled:opacity-60"
         />
       ))}
     </div>
@@ -268,7 +268,7 @@ function MobileNumberStep({
   return (
     <section className="flex flex-1 flex-col px-4 sm:px-6 space-y-2">
       <div className="pt-5 sm:pt-8">
-        <h2 className="font-hanuman text-[22px] font-bold   text-gray-900 sm:text-2xl">
+        <h2 className="font-hanuman text-[22px] font-bold  font-hanuman   text-gray-900 sm:text-2xl">
           Enter your mobile number
         </h2>
 
@@ -380,7 +380,7 @@ function OtpVerificationStep({
 
     const timer = window.setInterval(() => {
       setSeconds((current) =>
-        Math.max(0, current - 1),
+        Math.max(0, current-1),
       );
     }, 1000);
 
@@ -416,7 +416,7 @@ function OtpVerificationStep({
   return (
     <section className="flex flex-1 flex-col px-4 sm:px-6 ">
       <div className="pt-5 sm:pt-8">
-        <h2 className="font-hanuman text-[22px] font-bold   text-gray-900 sm:text-lg">
+        <h2 className="font-hanuman text-[22px] font-bold  font-hanuman   text-gray-900 sm:text-lg">
           Enter OTP
         </h2>
 
@@ -475,7 +475,7 @@ function OtpVerificationStep({
             <button
               type="button"
               onClick={handleResend}
-              className="font-semibold text-blue-600"
+              className="font-semibold  font-hanuman text-blue-600"
             >
               Resend OTP
             </button>

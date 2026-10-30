@@ -223,7 +223,7 @@ export default function SelfiePage() {
 
                 {/* Page heading */}
                 <section className="mt-3 px-4">
-                    <h1 className="font-hanuman text-[22px] font-bold   text-[#17213c]">
+                    <h1 className="font-hanuman text-[22px] font-bold  font-hanuman   text-[#17213c]">
                         Take a selfie
                     </h1>
 
@@ -239,7 +239,7 @@ export default function SelfiePage() {
                     </span>
 
                     <div>
-                        <p className="text-[14px] font-semibold text-[#273451]">
+                        <p className="text-[14px] font-semibold  font-hanuman text-[#273451]">
                             Keep your face inside the frame
                         </p>
 
@@ -283,7 +283,7 @@ export default function SelfiePage() {
                             <div className="absolute inset-0 flex flex-col items-center justify-center bg-slate-800 px-6 text-center text-white">
                                 <Camera size={32} className="text-slate-300" />
 
-                                <p className="mt-3 text-sm font-semibold">
+                                <p className="mt-3 text-sm font-semibold  font-hanuman">
                                     Camera unavailable
                                 </p>
 
@@ -294,7 +294,7 @@ export default function SelfiePage() {
                                 <button
                                     type="button"
                                     onClick={() => void startCamera()}
-                                    className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-xs font-semibold text-white"
+                                    className="mt-4 rounded-lg bg-blue-600 px-4 py-2 text-xs font-semibold  font-hanuman text-white"
                                 >
                                     Try Again
                                 </button>
@@ -303,7 +303,7 @@ export default function SelfiePage() {
 
                         {!cameraError && (
                             <>
-                                <div className="absolute left-3 top-3 rounded-full bg-slate-950/65 px-2 py-1 text-[8px] font-semibold text-white">
+                                <div className="absolute left-3 top-3 rounded-full bg-slate-950/65 px-2 py-1 text-[8px] font-semibold  font-hanuman text-white">
                                     {!capturedImage && cameraReady && (
                                         <span className="mr-1.5 inline-block size-1.5 rounded-full bg-red-500" />
                                     )}
@@ -349,7 +349,7 @@ export default function SelfiePage() {
                         <button
                             type="button"
                             onClick={() => setShowError(false)}
-                            className="shrink-0 text-[12px] font-bold text-red-600"
+                            className="shrink-0 text-[12px] font-bold  font-hanuman text-red-600"
                         >
                             DISMISS
                         </button>
@@ -360,12 +360,12 @@ export default function SelfiePage() {
                 {capturedImage && (
                     <section className="mt-3 rounded-2xl bg-white p-2.5 shadow-sm mx-4">
                         <div className="flex items-center gap-2">
-                            <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#D5E4F8] text-gray-600 font-bold">
+                            <span className="flex size-8 shrink-0 items-center justify-center rounded-full bg-[#D5E4F8] text-gray-600 font-bold  font-hanuman">
                                 <Camera size={15} />
                             </span>
 
                             <div className="min-w-0 flex-1">
-                                <p className="text-[14px] font-bold text-[#17213c]">
+                                <p className="text-[14px] font-bold  font-hanuman text-[#17213c]">
                                     Selfie Preview Flow
                                 </p>
 
@@ -374,7 +374,7 @@ export default function SelfiePage() {
                                 </p>
                             </div>
 
-                            <span className="rounded-full bg-[#D5E4F8] px-2 py-1 text-[12px] font-semibold text-gray-600">
+                            <span className="rounded-full bg-[#D5E4F8] px-2 py-1 text-[12px] font-semibold  font-hanuman text-gray-600">
                                 Ready
                             </span>
                         </div>
@@ -383,7 +383,7 @@ export default function SelfiePage() {
                             <button
                                 type="button"
                                 onClick={retakeSelfie}
-                                className="flex items-center justify-center font-hanuman gap-1.5 rounded-lg bg-[#EAEDFF] py-2.5 text-[15px] font-bold text-blue-600"
+                                className="flex items-center justify-center font-hanuman gap-1.5 rounded-lg bg-[#EAEDFF] py-2.5 text-[15px] font-bold  font-hanuman text-blue-600"
                             >
                                 <RotateCcw size={13} />
                                 Retake
@@ -392,7 +392,7 @@ export default function SelfiePage() {
                             <button
                                 type="button"
                                 onClick={() => setShowPreview(true)}
-                                className="flex items-center justify-center font-hanuman gap-1.5 rounded-lg bg-blue-600 py-2.5 text-[15px] font-bold text-white"
+                                className="flex items-center justify-center font-hanuman gap-1.5 rounded-lg bg-blue-600 py-2.5 text-[15px] font-bold  font-hanuman text-white"
                             >
                                 <CheckCircle2 size={13} />
                                 Preview
@@ -407,7 +407,7 @@ export default function SelfiePage() {
                         type="button"
                         onClick={capturedImage ? continueToReview : takeSelfie}
                         disabled={!capturedImage && (!cameraReady || !!cameraError)}
-                        className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-700 py-3 text-xl font-semibold text-white shadow-sm hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-700 py-3 text-xl font-semibold  font-hanuman text-white shadow-sm hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                         {capturedImage ? (
                             <>Continue →</>
@@ -436,7 +436,7 @@ export default function SelfiePage() {
                         onClick={(event) => event.stopPropagation()}
                     >
                         <div className="mb-3 flex items-center justify-between">
-                            <h2 className="text-sm font-bold text-gray-900">
+                            <h2 className="text-sm font-bold  font-hanuman text-gray-900">
                                 Selfie Preview
                             </h2>
 
@@ -459,7 +459,7 @@ export default function SelfiePage() {
                         <Button
                             type="button"
                             onClick={() => setShowPreview(false)}
-                            className="mt-3 w-full rounded-lg bg-blue-600 py-2.5 text-xs font-semibold text-white"
+                            className="mt-3 w-full rounded-lg bg-blue-600 py-2.5 text-xs font-semibold  font-hanuman text-white"
                         >
                             Done
                         </Button>

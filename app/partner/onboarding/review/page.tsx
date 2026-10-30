@@ -44,7 +44,7 @@ export default function ReviewPage() {
 
                 <div className="space-y-2.5 px-3 pb-5 pt-2">
                     <section>
-                        <h1 className="font-hanuman text-[22px] font-bold text-[#17213c]">
+                        <h1 className="font-hanuman text-[22px] font-bold  font-hanuman text-[#17213c]">
                             Review your details
                         </h1>
                         <p className="mt-0.5 text-[14px] text-gray-500">
@@ -94,7 +94,7 @@ export default function ReviewPage() {
                         <ReviewRow
                             label="Status"
                             value={
-                                <span className="inline-flex items-center gap-1 rounded-full font-bold bg-[#EAEDFF] px-1.5 py-0.5 text-[12px] text-blue-600">
+                                <span className="inline-flex items-center gap-1 rounded-full font-bold  font-hanuman bg-[#EAEDFF] px-1.5 py-0.5 text-[12px] text-blue-600">
                                     <CheckCircle2 fill="#2563EB" stroke="white" size={15} />
                                     Ready for verification
                                 </span>
@@ -110,7 +110,7 @@ export default function ReviewPage() {
                     >
                         <ReviewRow label="Selfie" 
                             value={
-                                <span className="inline-flex items-center gap-1 rounded-full font-bold bg-[#EAEDFF] px-1.5 py-0.5 text-[12px] text-blue-600">
+                                <span className="inline-flex items-center gap-1 rounded-full font-bold  font-hanuman bg-[#EAEDFF] px-1.5 py-0.5 text-[12px] text-blue-600">
                                     <CheckCircle2 fill="#2563EB" stroke="white" size={15} />
                                     Completed 
                                 </span>
@@ -123,7 +123,7 @@ export default function ReviewPage() {
                             type="checkbox"
                             checked={confirmDetails}
                             onChange={(event) => setConfirmDetails(event.target.checked)}
-                            className="mt-0.5 size-3 accent-blue-600"
+                            className="mt-0.5 size-5 accent-blue-600"
                         />
                         <span className="text-[14px]  text-[#131B2E]">
                             I confirm that the information provided is correct.
@@ -135,14 +135,14 @@ export default function ReviewPage() {
                             type="checkbox"
                             checked={acceptTerms}
                             onChange={(event) => setAcceptTerms(event.target.checked)}
-                            className="mt-0.5 size-3 accent-blue-600"
+                            className="mt-0.5 size-4.5 accent-blue-600"
                         />
                         <span className="text-[14px]  text-[#131B2E]">
                             Team &amp; Condition, Privacy
                         </span>
                     </label>
 
-                    <p className="flex items-center justify-center gap-1 text-[12px] font-bold text-gray-500">
+                    <p className="flex items-center justify-center gap-1 text-[12px] font-bold  font-hanuman text-gray-500">
                         <LockKeyhole size={9} />
                         Protected under Xerox Partner Privacy Terms
                     </p>
@@ -151,7 +151,7 @@ export default function ReviewPage() {
                         type="button"
                         onClick={handleSubmit}
                         disabled={!confirmDetails || !acceptTerms || submitting}
-                        className="flex w-full items-center justify-center gap-1 rounded-lg bg-blue-600 py-2.5 text-xs font-semibold text-white shadow-sm hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+                        className="flex w-full items-center justify-center gap-1 rounded-lg bg-blue-600 py-2.5 text-xl font-semibold  font-hanuman text-white shadow-sm hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                         {submitting ? "Submitting..." : "Submit Application"}
                         <ArrowRight size={14} />

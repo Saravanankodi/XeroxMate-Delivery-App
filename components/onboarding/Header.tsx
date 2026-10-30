@@ -19,15 +19,15 @@ export default function Header({
     <header className="bg-[#FAF8FFCC]">
       {/* Optional page title */}
       {title && (
-        <div className="flex min-h-16 items-center justify-center  shadow-[0px_1px_8px_0px_#0000000A] backdrop-blur-xl  py-2 ">
-          <h1 className="font-hanuman text-xl font-semibold text-[#17213c]">
+        <div className="flex min-h-9 items-center justify-center  shadow-[0px_1px_8px_0px_#0000000A] backdrop-blur-xl  mt-1 ">
+          <h1 className="font-hanuman text-xl font-semibold  font-hanuman text-[#17213c]">
             {title}
           </h1>
         </div>
       )}
 
       {/* Brand row */}
-      <div className="flex min-h-11 items-center justify-between my-5 px-3">
+      <div className="flex min-h-8 items-center justify-between my-2 px-3">
         <div className="flex min-w-0 items-center gap-1.5">
           <div className="relative size-10 shrink-0 overflow-hidden rounded-md">
             <Image
@@ -40,7 +40,7 @@ export default function Header({
             />
           </div>
 
-          <span className="truncate text-sm font-bold tracking-tight font-hanuman text-[#17213c]">
+          <span className="truncate text-base font-bold  font-hanuman tracking-tight font-hanuman text-[#17213c]">
             {showRiderLabel ? "XEROXMATE RIDER" : "XEROXMATE"}
           </span>
         </div>
@@ -58,7 +58,7 @@ export default function Header({
             {Array.from({ length: totalSteps }, (_, index) => (
               <span
                 key={index}
-                className={`size - 1.5 rounded - full ${
+                className={`size-1.5 rounded-full ${
   index < currentStep
     ? "bg-blue-600"
     : "bg-gray-200"
